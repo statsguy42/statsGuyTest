@@ -1,0 +1,7 @@
+%another file
+\documentclass{article}
+\begin{document}
+
+test
+
+\end{document}
