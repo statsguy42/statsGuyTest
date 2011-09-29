@@ -59,19 +59,7 @@
 #X # Use different geoms
 #X qplot(mpg, wt, geom="path")
 #X qplot(factor(cyl), wt, geom=c("boxplot", "jitter"))
-qplot <- function(x, 
-                  y = NULL, 
-                  z=NULL, 
-                  ..., 
-                  data, 
-                  facets = . ~ ., 
-                  margins=FALSE, 
-                  geom = "auto", 
-                  stat=list(NULL), 
-                  position=list(NULL), 
-                  xlim = c(NA, NA), 
-                  ylim = c(NA, NA), 
-                  log = "", main = NULL, xlab = deparse(substitute(x)), ylab = deparse(substitute(y)), asp = NA) {
+qplot <- function(x, y = NULL, z=NULL, ..., data, facets = . ~ ., margins=FALSE, geom = "auto", stat=list(NULL), position=list(NULL), xlim = c(NA, NA), ylim = c(NA, NA), log = "", main = NULL, xlab = deparse(substitute(x)), ylab = deparse(substitute(y)), asp = NA) {
 
   argnames <- names(as.list(match.call(expand.dots=FALSE)[-1]))
   arguments <- as.list(match.call()[-1])
